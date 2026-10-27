@@ -1,0 +1,198 @@
+body { 
+    font-family: Arial, sans-serif; 
+    padding: 20px; 
+}
+
+section { 
+    margin-bottom: 40px; 
+    padding-bottom: 20px; 
+    border-bottom: 1px dashed #ccc; 
+}
+
+h3 { 
+    margin-bottom: 15px; 
+    color: #333; 
+}
+
+.menu-5-1 ul { 
+    padding-left: 20px; 
+}
+
+.menu-5-1 a { 
+    color: blue; 
+}
+
+.menu-5-2 ul { 
+    list-style: none; 
+    padding: 0; 
+    width: 200px; 
+}
+
+.menu-5-2 li { 
+    border: 1px solid #6b8cce; 
+    margin-bottom: 5px; 
+}
+
+.menu-5-2 a { 
+    display: block; 
+    padding: 8px 12px; 
+    text-decoration: none; 
+    color: #333; 
+}
+
+.menu-5-2 a:hover { 
+    background-color: #e6f0ff; 
+}
+
+.menu-5-3 ul { 
+    list-style: none; 
+    padding: 0; 
+    width: 200px; 
+}
+
+.menu-5-3 a { 
+    display: block; 
+    padding: 10px 12px; 
+    text-decoration: none; 
+    color: white; 
+    background-color: #555; 
+    margin-bottom: 2px; 
+}
+
+.menu-5-3 a:hover { 
+    background-color: white; 
+    color: black; 
+    border: 1px solid black; 
+    padding: 9px 11px; 
+}
+
+.menu-5-4 ul { 
+    list-style: none; 
+    padding: 0; 
+    width: 200px; 
+}
+
+.menu-5-4 a { 
+    display: block; 
+    padding: 10px 12px; 
+    text-decoration: none; 
+    color: white; 
+    background-color: #0088cc; 
+    margin-bottom: 2px; 
+}
+
+.menu-5-4 a:hover { 
+    background-color: #006699; 
+}
+
+.menu-5-4 a:hover::after { 
+    content: " ✈"; 
+}
+
+.menu-5-5 ul { 
+    list-style: none; 
+    padding: 0; 
+    margin: 0; 
+    display: flex; 
+}
+
+.menu-5-5 li { 
+    margin-right: 2px; 
+}
+
+.menu-5-5 a { 
+    display: block; 
+    padding: 8px 15px; 
+    text-decoration: none; 
+    color: #333; 
+    border: 1px solid #6b8cce; 
+}
+
+.menu-5-5 a:hover { 
+    background-color: #555; 
+    color: white; 
+    border-color: #555; 
+}
+
+.menu-5-6 ul { 
+    list-style: none; 
+    padding: 0; 
+    margin: 0; 
+    display: flex; 
+    background-color: #f39c12; 
+    width: fit-content; 
+}
+
+.menu-5-6 a { 
+    display: block; 
+    padding: 10px 20px; 
+    text-decoration: none; 
+    color: white; 
+    text-transform: uppercase; 
+    font-size: 14px; 
+}
+
+.menu-5-6 a:hover { 
+    background-color: #e74c3c; 
+}
+
+.menu-5-7 ul { 
+    list-style: none; 
+    padding: 0; 
+    margin: 0;
+    display: flex; 
+    gap: 20px; 
+}
+
+.menu-5-7 li { 
+    text-align: center; 
+}
+
+.menu-5-7 a { 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    text-decoration: none; 
+    color: #ccc; 
+    font-size: 14px; 
+}
+
+.menu-5-7 .icon { 
+    font-size: 24px; 
+    margin-bottom: 5px; 
+    filter: grayscale(100%); 
+    opacity: 0.5; 
+}
+
+.menu-5-7 a:hover { 
+    color: #0088cc; 
+}
+
+.menu-5-7 a:hover .icon { 
+    filter: grayscale(0%); 
+    opacity: 1; 
+}
+
+.calendar { 
+    border-collapse: collapse; 
+    text-align: center; 
+    font-family: monospace; 
+    font-size: 16px; 
+}
+
+.calendar th, .calendar td { 
+    padding: 5px 10px; 
+}
+
+.calendar th { 
+    color: #555; 
+}
+
+.calendar .weekend { 
+    color: red; 
+}
+
+.calendar td:hover { 
+    background-color: #eee; 
+    cursor: pointer; 
+}

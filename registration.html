@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация — Sia Fleurs</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #FDFBF7;
+            color: #000000;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            line-height: 1.6;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+        }
+
+        /* --- ХЕДЕР --- */
+        header {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            align-items: center;
+            padding: 20px 50px;
+            background-color: #ffffff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+            color: #000000;
+            font-weight: 500;
+            font-size: 14px;
+            justify-self: start;
+            transition: color 0.2s;
+        }
+
+        .back-btn:hover {
+            color: #e09b5c;
+        }
+
+        .back-btn svg {
+            transition: transform 0.2s;
+        }
+
+        .back-btn:hover svg {
+            transform: translateX(-3px);
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 28px;
+            font-weight: bold;
+            justify-self: center;
+            text-align: center;
+        }
+
+        .top-menu {
+            justify-self: end;
+        }
+
+        .top-menu ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 6px;
+        }
+
+        .top-menu a {
+            display: block;
+            padding: 8px 16px;
+            text-decoration: none;
+            color: #000;
+            background-color: #FFD3AC;
+            font-weight: 500;
+            font-size: 13px;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .top-menu a:hover {
+            background-color: #f5bc87;
+        }
+
+        /* --- ОСНОВНАЯ ЧАСТЬ С ФОРМОЙ --- */
+        main {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 50px 20px;
+        }
+
+        .form-card {
+            background: #ffffff;
+            width: 100%;
+            max-width: 500px;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            text-align: left;
+        }
+
+        .form-card h2 {
+            font-size: 28px;
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 500;
+            font-size: 14px;
+            color: #444444;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="number"],
+        input[type="file"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 14px;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+
+        input:focus {
+            border-color: #e09b5c;
+        }
+
+        input[type="range"] {
+            width: 100%;
+            margin-bottom: 15px;
+            accent-color: #FFD3AC;
+        }
+
+        .gender-group {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 15px;
+        }
+
+        .gender-option {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            cursor: pointer;
+            font-weight: normal;
+        }
+
+        .checkbox-row {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .checkbox-row input {
+            width: auto;
+            margin: 0;
+            accent-color: #FFD3AC;
+        }
+
+        .checkbox-row label {
+            margin: 0;
+            cursor: pointer;
+        }
+
+        .btn-main {
+            display: block;
+            width: 100%;
+            background-color: #FFD3AC;
+            color: #000;
+            padding: 14px;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+            text-align: center;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        .btn-main:hover {
+            background-color: #f5bc87;
+        }
+
+        .switch-link {
+            text-align: center;
+            margin-top: 18px;
+            font-size: 14px;
+            color: #666666;
+        }
+
+        .switch-link a {
+            color: #d88a4e;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .switch-link a:hover {
+            text-decoration: underline;
+        }
+
+        /* --- ПОДВАЛ --- */
+        .site-footer {
+            background-color: #333333;
+            color: #fff;
+            padding: 50px 20px 30px;
+            text-align: center;
+            margin-top: auto;
+        }
+
+        .footer-subscribe h3 {
+            font-size: 22px;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+
+        .subscribe-form {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        .subscribe-form input[type="email"] {
+            width: 100%;
+            padding: 12px;
+            border-radius: 8px;
+            border: none;
+            background-color: #555;
+            color: #fff;
+            margin-bottom: 15px;
+            text-align: center;
+            outline: none;
+        }
+
+        .subscribe-form input[type="email"]::placeholder {
+            color: #bbb;
+        }
+
+        .footer-radio-group {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .footer-radio-option {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            color: #ccc;
+        }
+
+        .footer-radio-option input {
+            accent-color: #FFD3AC;
+        }
+
+        .btn-subscribe {
+            background-color: #FFD3AC;
+            color: #333;
+            border: none;
+            padding: 12px 40px;
+            border-radius: 25px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+            margin-bottom: 30px;
+        }
+
+        .btn-subscribe:hover {
+            background-color: #f5bc87;
+        }
+
+        .footer-menu ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            margin-bottom: 20px;
+        }
+
+        .footer-menu a {
+            color: #FFD3AC;
+            text-decoration: none;
+            font-size: 15px;
+            transition: color 0.3s;
+        }
+
+        .footer-menu a:hover {
+            color: #ffffff;
+        }
+
+        .copyright {
+            font-size: 14px;
+            color: #888;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                grid-template-columns: 1fr;
+                gap: 15px;
+                text-align: center;
+                padding: 15px 20px;
+            }
+            .back-btn, .top-menu {
+                justify-self: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="back-btn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="19" y1="12" x2="5" y2="12"></line>
+                <polyline points="12 19 5 12 12 5"></polyline>
+            </svg>
+            <span>На главную</span>
+        </a>
+
+        <div class="logo">Sia Fleurs</div>
+
+        <nav class="top-menu">
+            <ul>
+                <li><a href="index.html#gallery">Работы</a></li>
+                <li><a href="index.html#contact">Контакты</a></li>
+                <li><a href="index.html#about">О компании</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="form-card">
+            <h2>Создать аккаунт</h2>
+            <form action="account.html" method="POST" enctype="multipart/form-data">
+                <label for="reg-login">E-mail / Номер телефона:</label>
+                <input type="text" id="reg-login" name="login" required>
+
+                <label for="reg-name">Имя:</label>
+                <input type="text" id="reg-name" name="name" required>
+
+                <label for="reg-surname">Фамилия:</label>
+                <input type="text" id="reg-surname" name="surname" required>
+
+                <label for="reg-age">Возраст:</label>
+                <input type="number" id="reg-age" name="age" min="14" max="100" required>
+                <input type="range" id="reg-age-range" min="14" max="100" value="18" oninput="document.getElementById('reg-age').value = this.value">
+
+                <label>Пол:</label>
+                <div class="gender-group">
+                    <label class="gender-option">
+                        <input type="radio" name="gender" value="male" required> Мужской
+                    </label>
+                    <label class="gender-option">
+                        <input type="radio" name="gender" value="female"> Женский
+                    </label>
+                </div>
+
+                <label for="reg-pass">Пароль (минимум 6 символов):</label>
+                <input type="password" id="reg-pass" name="password" minlength="6" required>
+
+                <label for="reg-pass-repeat">Повтор пароля:</label>
+                <input type="password" id="reg-pass-repeat" name="password_repeat" minlength="6" required>
+
+                <label for="reg-avatar">Загрузка фото:</label>
+                <input type="file" id="reg-avatar" name="avatar" accept="image/*">
+
+                <div class="checkbox-row">
+                    <input type="checkbox" id="reg-agree" name="agree" required>
+                    <label for="reg-agree">Согласие на обработку персональных данных</label>
+                </div>
+
+                <button type="submit" class="btn-main">Зарегистрироваться</button>
+
+                <p class="switch-link">
+                    Уже есть аккаунт? <a href="authorization.html">Войти</a>
+                </p>
+            </form>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-subscribe">
+            <h3>Подпишитесь на наши новости</h3>
+            <form class="subscribe-form" action="#" method="POST">
+                <input type="email" placeholder="Ваш E-mail" required>
+                <div class="footer-radio-group">
+                    <label class="footer-radio-option">
+                        <input type="radio" name="sub_freq" value="daily" checked> Ежедневно
+                    </label>
+                    <label class="footer-radio-option">
+                        <input type="radio" name="sub_freq" value="weekly"> Еженедельно
+                    </label>
+                </div>
+                <button type="submit" class="btn-subscribe">Подписаться</button>
+            </form>
+        </div>
+
+        <nav class="footer-menu">
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="index.html#gallery">Новости</a></li>
+                <li><a href="index.html#contact">Контакты</a></li>
+                <li><a href="index.html#about">О компании</a></li>
+            </ul>
+        </nav>
+
+        <p class="copyright">&copy; 2026 Sia Fleurs. Все права защищены.</p>
+    </footer>
+
+</body>
+</html>

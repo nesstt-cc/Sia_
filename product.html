@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Авторский букет — Sia Fleurs</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="product-page.css">
+</head>
+<body>
+
+    <!-- Шапка сайта -->
+    <header>
+        <a href="index.html" class="back-btn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="19" y1="12" x2="5" y2="12"></line>
+                <polyline points="12 19 5 12 12 5"></polyline>
+            </svg>
+            <span>На главную</span>
+        </a>
+
+        <div class="logo">Sia Fleurs</div>
+
+        <nav class="top-menu">
+            <ul>
+                <li><a href="account.html">Профиль</a></li>
+                <li><a href="authorization.html">Вход</a></li>
+                <li><a href="registration.html">Регистрация</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="product-main">
+        <div class="product-card">
+            
+            <!-- Верхняя часть: фото и покупка -->
+            <section class="product-top-section">
+                <figure class="product-gallery">
+                    <img src="images/1.jpeg" alt="Авторский букет" class="main-bouquet-img">
+                    <figcaption>Эстетичный букет в дизайнерской упаковке</figcaption>
+                </figure>
+
+                <div class="product-info">
+                    <h2>Авторский букет «Эстетика природы»</h2>
+                    <p class="stock-status">В наличии: 7 шт.</p>
+                    <p class="product-desc">Приятный букет для любителей эстетики и природной текстуры. Содержит экзотические орхидеи, розы и декор.</p>
+                    
+                    <div class="rating">
+                        <span>★ ★ ★ ★ ★</span>
+                        <span class="reviews-count">293 отзыва</span>
+                    </div>
+
+                    <div class="price-action">
+                        <span class="price">8.990 ₽</span>
+                        <div class="quantity-selector">
+                            <button type="button">-</button>
+                            <input type="text" value="1" readonly class="qty-input">
+                            <button type="button">+</button>
+                        </div>
+                    </div>
+
+                    <div class="buy-buttons">
+                        <button type="button" class="btn-primary">Купить сейчас</button>
+                        <button type="button" class="btn-secondary">Добавить в корзину</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Блок похожих товаров (маленькие ровные картинки) -->
+            <section class="related-section">
+                <h3>Также могут понравиться:</h3>
+                <div class="related-grid">
+                    <img src="images/1.jpeg" alt="Букет 1" class="small-preview">
+                    <img src="images/2.jpeg" alt="Букет 2" class="small-preview">
+                    <img src="images/3.jpeg" alt="Букет 3" class="small-preview">
+                </div>
+            </section>
+
+            <!-- Таблица характеристик -->
+            <section class="specs-section">
+                <details class="specs-dropdown">
+                    <summary>Больше информации о товаре</summary>
+                    <table class="specs-table">
+                        <tr>
+                            <td>Состав:</td>
+                            <td>Орхидея, роза, декоративная зелень, крафт-бумага</td>
+                        </tr>
+                        <tr>
+                            <td>Высота:</td>
+                            <td>50 см</td>
+                        </tr>
+                        <tr>
+                            <td>Стойкость:</td>
+                            <td>От 7 до 14 дней при правильном уходе</td>
+                        </tr>
+                    </table>
+                </details>
+            </section>
+
+            <!-- Блок отзывов -->
+            <section class="reviews-section">
+                <h3>Оценки и отзывы:</h3>
+                
+                <article class="review-card">
+                    <div class="review-text">
+                        <span class="reviewer-name">Анна</span>
+                        <time datetime="2026-02-10" class="review-date">02.10.2026</time>
+                        <p>Сервис магазина: <strong>5 / 5</strong></p>
+                        <p>Цена\качество: <strong>5 / 5</strong></p>
+                        <p>Соответствие: <strong>5 / 5</strong></p>
+                    </div>
+                    <figure class="review-photo">
+                        <img src="images/1.jpeg" alt="Фото букета от Анны">
+                    </figure>
+                </article>
+
+                <article class="review-card">
+                    <div class="review-text">
+                        <span class="reviewer-name">Дарья</span>
+                        <time datetime="2026-02-17" class="review-date">17.02.2026</time>
+                        <p>Сервис магазина: <strong>5 / 5</strong></p>
+                        <p>Цена\качество: <strong>5 / 5</strong></p>
+                        <p>Соответствие: <strong>5 / 5</strong></p>
+                    </div>
+                    <figure class="review-photo">
+                        <img src="images/2.jpeg" alt="Фото букета от Дарьи">
+                    </figure>
+                </article>
+
+                <button type="button" class="btn-all-reviews">Показать все 2 417 отзывов</button>
+            </section>
+
+        </div>
+    </main>
+
+<footer class="site-footer">
+    <div class="footer-container">
+        <!-- Блок подписки -->
+        <div class="footer-subscribe">
+            <h3>Подпишитесь на наши новости</h3>
+            
+            <form class="subscribe-form" action="#" method="POST">
+                <input type="email" placeholder="Ваш E-mail" required>
+                
+                <div class="radio-group">
+                    <label class="radio-container">
+                        <input type="radio" name="frequency" value="daily" checked>
+                        <span class="radio-text">Ежедневно</span>
+                    </label>
+                    <label class="radio-container">
+                        <input type="radio" name="frequency" value="weekly">
+                        <span class="radio-text">Еженедельно</span>
+                    </label>
+                </div>
+                
+                <button type="submit" class="btn-subscribe">Подписаться</button>
+            </form>
+        </div>
+
+        <nav class="footer-nav">
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="index.html#gallery">Новости</a></li>
+                <li><a href="index.html#contact">Контакты</a></li>
+                <li><a href="index.html#about">О компании</a></li>
+            </ul>
+        </nav>
+
+        <p class="copyright">&copy; 2026 Sia Fleurs. Все права защищены.</p>
+    </div>
+</footer>
+</body>
+</html>
